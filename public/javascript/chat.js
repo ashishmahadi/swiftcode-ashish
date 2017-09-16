@@ -6,7 +6,7 @@ app.controller('chatController',function($scope,$sce){
  {
      exampleSocket.send($scope.userMessage);        
      $scope.userMessage = "";
- };  $scope.trust = $sce.trustAsHtml;    var  exampleSocket =  new  WebSocket("ws://localhost:9000/chatSocket");  
+ };  $scope.trust = $sce.trustAsHtml;    var  exampleSocket =  new  WebSocket("wss://swiftcode-ezio.herokuapp.com/chatSocket");  
  exampleSocket.onmessage  =   function  (event)
  {
      var jsonData = JSON.parse(event.data);        
